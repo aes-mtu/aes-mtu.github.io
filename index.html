@@ -52,36 +52,43 @@ body, html {
 }
 </style>
 <body>
-
-<!-- Navbar (sit on top) -->
+<!-- Navbar & Announcement Container (Stays fixed at the very top together) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
+  
+  <!-- Announcement Banner -->
+  <div style="background-color: #222; color: #fff; text-align: center; padding: 8px; font-size: 13px; font-weight: bold; width: 100%; border-bottom: 1px solid #444;">
+    📢 Photos are currently being updated and will be available soon!
+  </div>
+
+  <!-- Main Navbar Bar - Added w3-black (or w3-white) so it stays solid at the top -->
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#photos" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PHOTOS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" onclick="toggleFunction()">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
 </div>
->
+
+<!-- Navbar on small screens (Dropdown menu) -->
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="margin-top: 75px;">
+  <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+  <a href="#photos" class="w3-bar-item w3-button" onclick="toggleFunction()">PHOTOS</a>
+  <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+</div>
+
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home" style="margin-top: 40px;">
   <div class="w3-display-middle" style="width: 100%; padding: 0 16px; text-align: center;">
-    <span class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="display: inline-block; max-w-full; white-space: normal; line-height: 1.4;">
-      Audio Engineering Society At Michigan Tech
+    <span class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="display: inline-block; max-width: 100%; white-space: normal; line-height: 1.4;">
+      AUDIO ENGINEERING SOCIETY AT MICHIGAN TECH
     </span>
   </div>
 </div>
@@ -120,12 +127,13 @@ body, html {
   <div class="w3-row">
   <br><br><br>
   <h3 class="w3-center">CALENDAR</h3>
-  <p>We meet weekly at 7pm on Wednesdays in our lab in the EERC.</p>
+  <p>We meet biweekly from 7-8pm in Walker 210, or at any of our events listed here!</p>
   <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%234285F4&amp;ctz=America%2FNew_York&amp;src=YWVzQG10dS5lZHU&amp;color=%237986CB&amp;showNav=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
   
   </div>
   
 </div>
+
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
@@ -239,9 +247,10 @@ body, html {
   <p class="w3-center">Here are some of the projects we are planning to work on!</p>
   
   <ul>
-	<li>Rotary Subwoofer build</li>
+	<li>Custom Speaker Builds</li>
 	<li>PA Speaker build</li>
-	<li>Winter Carnival 2025</li>
+	<li>Winter Carnival 2026</li>
+  <li>Whatever Other Ideas We Can Think Of</li>
   </ul>
   
   <p>Have a project idea? Fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUOdBVfwOl75hWCOfJ4Vz7ERJg3EY0H6_D8cSQANZEvbUWAA/viewform">this form</a> and let us know!</p>
@@ -270,12 +279,12 @@ body, html {
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
-      <img src="Media/eerc.jpg" class="w3-image w3-round" style="width:100%">
+      <img src="Media/walker.jpg" class="w3-image w3-round" style="width:100%">
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Michigan Tech Campus, Houghton, Michigan<br>
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Room: EERC SB<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Room: Walker 210<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: aes@mtu.edu<br>
       </div>
       <p>Swing by for a meeting, or send us an email at aes@mtu.edu:
@@ -308,12 +317,8 @@ body, html {
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.instagram.com/aes_mtu/" class="fa fa-facebook-official w3-hover-opacity"></a>
+    <a href="https://www.facebook.com/MTUAES/" class="fa fa-instagram w3-hover-opacity"></a>
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
@@ -327,16 +332,7 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
+
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
